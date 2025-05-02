@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Officer Avatar -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avatarContainer"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvInitials"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F1F5F9"
+                android:gravity="center"
+                android:textColor="#334155"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="JS" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Officer Name -->
+        <TextView
+            android:id="@+id/tvOfficerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="#111827"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnDetails"
+            app:layout_constraintStart_toEndOf="@id/avatarContainer"
+            app:layout_constraintTop_toTopOf="@id/avatarContainer"
+            tools:text="John Smith" />
+
+        <!-- Officer Designation -->
+        <TextView
+            android:id="@+id/tvDesignation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/btnDetails"
+            app:layout_constraintStart_toStartOf="@id/tvOfficerName"
+            app:layout_constraintTop_toBottomOf="@id/tvOfficerName"
+            tools:text="Inspector" />
+
+        <!-- Officer Rating -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="#FBBF24"
+            android:stepSize="0.1"
+            app:layout_constraintStart_toStartOf="@id/tvOfficerName"
+            app:layout_constraintTop_toBottomOf="@id/tvDesignation"
+            tools:rating="4.5" />
+
+        <!-- Officer Phone -->
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#4B5563"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvOfficerName"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"
+            tools:text="+91 98765 43210" />
+
+        <!-- Call Button -->
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#2563EB"
+            android:drawableStart="@drawable/ic_call"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Call"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toStartOf="@id/btnDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+        <!-- Details Button -->
+        <Button
+            android:id="@+id/btnDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="#F9FAFB"
+            android:paddingHorizontal="16dp"
+            android:text="Details"
+            android:textAllCaps="false"
+            android:textColor="#111827"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/btnCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnCall"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Profile Header -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:id="@+id/profile_image_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/blue_100"
+                            app:cardCornerRadius="40dp">
+
+                            <ImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_user_circle"
+                                android:tint="@color/blue_600"
+                                />
+                        </androidx.cardview.widget.CardView>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/camera_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:backgroundTint="@color/blue_600"
+                            app:fabSize="mini"
+                            app:tint="@color/white"
+                            android:src="@drawable/ic_camera" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toStartOf="@id/settings_button"
+                        android:layout_toEndOf="@id/profile_image_container"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_900"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:text="Sarah Johnson" />
+
+                        <TextView
+                            android:id="@+id/profile_member_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_500"
+                            android:textSize="14sp"
+                            tools:text="Premium Member" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/profile_safety_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/blue_50"
+                                android:textColor="@color/blue_700"
+                                android:textSize="12sp"
+                                app:chipIcon="@drawable/ic_shield"
+                                app:chipIconTint="@color/blue_600"
+                                tools:text="Safety Score: 85" />
+
+                            <TextView
+                                android:id="@+id/profile_member_since"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/gray_500"
+                                android:textSize="12sp"
+                                tools:text="Member since January 2024" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_circle_gray"
+                        android:src="@drawable/ic_settings"
+                        android:tint="@color/gray_600"
+                       />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Profile Tabs -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@color/gray_100"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabIndicator="@null"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="4dp"
+                app:tabPaddingStart="4dp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/blue_600"
+                app:tabTextAppearance="@style/TabTextAppearance"
+                app:tabTextColor="@color/gray_700" />
+
+            <!-- Personal Info Layout -->
+            <include
+                android:id="@+id/personal_info_layout"
+                layout="@layout/layout_profile_personal_info" />
+
+            <!-- Security Layout -->
+            <include
+                android:id="@+id/security_layout"
+                layout="@layout/layout_profile_security" />
+
+            <!-- Emergency Layout -->
+            <include
+                android:id="@+id/emergency_layout"
+                layout="@layout/layout_profile_emergency" />
+
+            <!-- Media Layout -->
+            <include
+                android:id="@+id/media_layout"
+                layout="@layout/layout_profile_media" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

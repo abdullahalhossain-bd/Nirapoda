@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_top">
+
+    <!-- Dialog Header with close button -->
+    <View
+        android:id="@+id/draggableBar"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="12dp"
+        android:background="#E5E7EB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOfficerDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Officer Details"
+        android:textColor="#1F2937"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/draggableBar" />
+
+    <ImageButton
+        android:id="@+id/btnCloseDetails"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Close"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvOfficerDetailTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tvOfficerDetailTitle"
+        app:tint="#4B5563" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#E5E7EB"
+        app:layout_constraintTop_toBottomOf="@id/tvOfficerDetailTitle" />
+
+    <!-- Officer Profile Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailsAvatarContainer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1">
+
+        <TextView
+            android:id="@+id/tvDetailsInitials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1F5F9"
+            android:gravity="center"
+            android:textColor="#334155"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="JS" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvDetailsOfficerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#111827"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detailsAvatarContainer"
+        app:layout_constraintTop_toTopOf="@id/detailsAvatarContainer"
+        tools:text="Inspector Rahul Sharma" />
+
+    <TextView
+        android:id="@+id/tvDetailsDesignation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#6B7280"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvDetailsOfficerName"
+        app:layout_constraintStart_toStartOf="@id/tvDetailsOfficerName"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailsOfficerName"
+        tools:text="Senior Inspector" />
+
+    <RatingBar
+        android:id="@+id/rbDetailRating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="#FBBF24"
+        android:stepSize="0.1"
+        app:layout_constraintStart_toStartOf="@id/tvDetailsOfficerName"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailsDesignation"
+        tools:rating="4.7" />
+
+    <TextView
+        android:id="@+id/tvRatingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="#111827"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/rbDetailRating"
+        app:layout_constraintStart_toEndOf="@id/rbDetailRating"
+        app:layout_constraintTop_toTopOf="@id/rbDetailRating"
+        tools:text="4.7" />
+
+    <TextView
+        android:id="@+id/tvReviewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="#6B7280"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvRatingValue"
+        app:layout_constraintStart_toEndOf="@id/tvRatingValue"
+        app:layout_constraintTop_toTopOf="@id/tvRatingValue"
+        tools:text="(138 reviews)" />
+
+    <!-- Action Buttons -->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#047857"
+        android:textSize="12sp"
+        app:chipBackgroundColor="#ECFDF5"
+        app:chipIconEnabled="true"
+        app:chipIconTint="#10B981"
+        app:layout_constraintStart_toStartOf="@id/tvDetailsOfficerName"
+        app:layout_constraintTop_toBottomOf="@id/rbDetailRating"
+        tools:text="Available" />
+
+    <LinearLayout
+        android:id="@+id/llActionButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsAvatarContainer">
+
+        <Button
+            android:id="@+id/btnDetailsCall"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2563EB"
+            android:drawableStart="@drawable/ic_call"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="Call"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:cornerRadius="8dp" />
+
+        <Button
+            android:id="@+id/btnDetailsMessage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F9FAFB"
+            android:drawableStart="@drawable/ic_message"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="Message"
+            android:textAllCaps="false"
+            android:textColor="#111827"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+    <!-- Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/llActionButtons"
+        app:tabIndicatorColor="#2563EB"
+        app:tabSelectedTextColor="#2563EB"
+        app:tabTextColor="#6B7280">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- ScrollView for Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+        <!-- Content Container -->
+        <FrameLayout
+            android:id="@+id/flTabContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Information Tab Content -->
+            <include
+                android:id="@+id/layoutInfoTab"
+                layout="@layout/layout_officer_info_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Reviews Tab Content -->
+            <include
+                android:id="@+id/layoutReviewsTab"
+                layout="@layout/layout_officer_reviews_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

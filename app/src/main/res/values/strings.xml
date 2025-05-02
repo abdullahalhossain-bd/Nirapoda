@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nirapod</string>
+
+    <string-array name="sort_options">
+        <item>Recommended</item>
+        <item>Most Recent</item>
+        <item>Most Popular</item>
+        <item>Alphabetical</item>
+    </string-array>
+    <!-- Bottom Navigation -->
+    <string name="navigation_home">Home</string>
+    <string name="navigation_activity">Activity</string>
+    <string name="navigation_map">Map</string>
+    <string name="navigation_profile">Profile</string>
+
+    <!-- Common -->
+    <string name="action_back">Back</string>
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_more">More</string>
+    <string name="action_call">Call</string>
+    <string name="action_book">Book</string>
+    <string name="action_share">Share</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_next">Next</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_view_now">View Now</string>
+    <string name="action_access_now">Access Now</string>
+    <string name="search_hint">Search…</string>
+
+    <!-- Health and Wellness -->
+    <string name="health_title">Health &amp; Wellness</string>
+    <string name="healthcare_directory">Healthcare Directory</string>
+    <string name="first_aid_guides">First Aid Guides</string>
+    <string name="medication_reminders">Medication Reminders</string>
+    <string name="telemedicine">Telemedicine</string>
+    <string name="search_healthcare_hint">Search healthcare providers…</string>
+    <string name="add_medication">Add Medication</string>
+    <string name="today_schedule">Today\'s Schedule</string>
+    <string name="medication_due">You have %1$d medications due today</string>
+    <string name="mark_as_taken">Mark as Taken</string>
+    <string name="skip_medication">Skip</string>
+    <string name="emergency_situation">Emergency Situation?</string>
+    <string name="emergency_call_description">If this is a life-threatening emergency, call 911 immediately.</string>
+    <string name="call_emergency_services">Call Emergency Services</string>
+
+    <!-- Mental Health -->
+    <string name="mental_health_title">Mental Health</string>
+    <string name="therapist_finder">Find a Therapist</string>
+    <string name="meditation_guides">Meditation Guides</string>
+    <string name="self_care">Self Care</string>
+    <string name="support_groups">Support Groups</string>
+    <string name="in_immediate_danger">In Immediate Danger?</string>
+    <string name="immediate_danger_description">If you\'re experiencing thoughts of harming yourself or others, or are in immediate danger, please call emergency services right away.</string>
+    <string name="call_911">Call 911 Now</string>
+    <string name="crisis_text_line">Crisis Text Line</string>
+    <string name="crisis_support_subtitle">These helplines provide free, confidential support from trained counselors who can help with various mental health challenges and crises.</string>
+    <string name="available_text">Available: %1$s</string>
+    <string name="call_now">Call Now (24/7)</string>
+    <string name="live_chat_support">Live Chat Support</string>
+    <string name="response_time">Average response time: &lt;2 minutes</string>
+
+    <!-- Ride Sharing -->
+    <string name="ride_sharing_title">Ride Safety Tracker</string>
+    <string name="ride_description">Enter your rideshare details below for safety monitoring during your trip.</string>
+    <string name="safety_monitoring">Safety Monitoring</string>
+    <string name="location_sharing">Location Sharing</string>
+    <string name="emergency_alerts">Emergency Alerts</string>
+    <string name="driver_vehicle_info">Driver &amp; Vehicle Information</string>
+    <string name="trip_information">Trip Information</string>
+    <string name="ride_share_company">Ride Share Company</string>
+    <string name="driver_name">Driver\'s Name</string>
+    <string name="vehicle_license">Vehicle License Plate</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="driver_age">Driver\'s Age (if known)</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="destination">Destination</string>
+    <string name="est_arrival">Estimated Arrival Time</string>
+    <string name="est_duration">Estimated Trip Duration</string>
+    <string name="register_ride">Register Ride</string>
+    <string name="end_ride">End Ride</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="add_emergency_contact">Add Emergency Contact</string>
+    <string name="emergency_button">Emergency</string>
+    <string name="sharing_location">Sharing Location…</string>
+    <string name="ride_history">Ride History</string>
+    <string name="trip_completed">Completed</string>
+    <string name="trip_cancelled">Cancelled</string>
+
+    <!-- Map -->
+    <string name="nearby_safety">Nearby Safety</string>
+    <string name="police_stations">Police Stations</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="fire_stations">Fire Stations</string>
+    <string name="pharmacies">Pharmacies</string>
+    <string name="safe_zones">Safe Zones</string>
+
+    <!-- Activity -->
+    <string name="recent_activity">Recent Activity</string>
+    <string name="safety_checks">Safety Checks</string>
+    <string name="alerts">Alerts</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="privacy">Privacy</string>
+    <string name="notifications">Notifications</string>
+    <string name="appearance">Appearance</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="greeting">Good Afternoon, Shea!</string>
+
+    <!-- Navigation options -->
+    <string name="home">Home</string>
+    <string name="calendar">Calendar</string>
+    <string name="message">Message</string>
+    <string name="profile">Profile</string>
+
+    <!-- Tab texts -->
+    <string name="my_profile">My Profile</string>
+    <string name="child_profile">Child\'s Profile</string>
+    <string name="provider_profile">Provider Profile</string>
+
+    <!-- Section headings -->
+    <string name="personal_stats">Personal Stats</string>
+    <string name="mobile_health">Mobile Health</string>
+    <string name="mobile_health_description">Meet with Kaiser Providers on the go</string>
+    <string name="community_board">Community Board</string>
+    <string name="daily_news">Daily News</string>
+    <string name="baby_safety">Baby Safety</string>
+    <string name="baby_safety_tracker">Baby Safety Tracker</string>
+    <string name="baby_safety_description">Keep your home environment secured and safe from household mishaps</string>
+    <string name="mental_health_support">Mental Health Support</string>
+    <string name="crisis_support">Crisis Support</string>
+    <string name="more_tools">More Tools</string>
+
+    <string name="view_all">View all</string>
+
+    <!-- Button texts -->
+    <string name="learn_more">Learn More</string>
+    <string name="connect_now">Connect Now</string>
+    <string name="join_now">Join Now</string>
+    <string name="access">Access</string>
+    <string name="need_immediate_support">Need Immediate Support?</string>
+    <string name="national_suicide_prevention">National Suicide Prevention</string>
+
+    <string name="view_more">View More</string>
+    <string name="add_new_tracker">Add New Tracker</string>
+
+    <!-- Stats -->
+    <string name="baby_tracker_text">Baby Due Date Reminder?</string>
+    <string name="eight">8</string>
+    <string name="two_seven">27</string>
+    <string name="one_two_three">123</string>
+    <string name="days">days</string>
+    <string name="online">Online</string>
+
+    <!-- Support service texts -->
+    <string name="depression_help">Depression Help</string>
+    <string name="anxiety_help">Anxiety Help</string>
+    <string name="stress_management">Stress Management</string>
+    <string name="grief_loss">Grief &amp; Loss</string>
+    <string name="fetal_kick_counter">Fetal Kick Counter</string>
+    <string name="meditation">Meditation</string>
+    <string name="contraction_timer">Contraction Timer</string>
+    <string name="lactation_support">Lactation Support</string>
+    <string name="find_your_therapist">Find Your Therapist</string>
+
+    <!-- Event text -->
+    <string name="injection_added">Injection added</string>
+    <string name="community_intro">Community Intro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
+

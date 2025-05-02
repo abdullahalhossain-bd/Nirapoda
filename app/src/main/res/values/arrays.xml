@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ride Share Companies -->
+    <string-array name="ride_share_companies">
+        <item>Uber</item>
+        <item>Lyft</item>
+        <item>DiDi</item>
+        <item>Bolt</item>
+        <item>Other</item>
+    </string-array>
+</resources>
