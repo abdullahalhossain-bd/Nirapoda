@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#F5F5F5"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Author and Date -->
+        <TextView
+            android:id="@+id/tvReviewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jane Doe"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvReviewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03/15/2025"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tvReviewAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewAuthor" />
+
+        <!-- Rating -->
+        <RatingBar
+            android:id="@+id/rbReviewRating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1"
+            app:layout_constraintStart_toStartOf="@+id/tvReviewDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewDate" />
+
+        <!-- Review Content -->
+        <TextView
+            android:id="@+id/tvReviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Dr. Williams is amazing! She really listens to my concerns and takes the time to explain things thoroughly."
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/rbReviewRating" />
+
+        <!-- Like/Dislike Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewContent">
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Like"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                android:src="@drawable/ic_like" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <!-- Author and Date -->
+                    <TextView
+                        android:id="@+id/tvReviewAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jane Doe"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvReviewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03/15/2025"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/tvReviewAuthor"
+                        app:layout_constraintTop_toBottomOf="@+id/tvReviewAuthor" />
+
+                    <!-- Rating -->
+                    <RatingBar
+                        android:id="@+id/rbReviewRating"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5"
+                        android:stepSize="1"
+                        app:layout_constraintStart_toStartOf="@+id/tvReviewDate"
+                        app:layout_constraintTop_toBottomOf="@+id/tvReviewDate" />
+
+                    <!-- Review Content -->
+                    <TextView
+                        android:id="@+id/tvReviewContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dr. Williams is amazing! She really listens to my concerns and takes the time to explain things thoroughly."
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/rbReviewRating" />
+
+                    <!-- Like/Dislike Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvReviewContent">
+
+                        <ImageButton
+                            android:id="@+id/btnLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Like"
+                            android:minWidth="24dp"
+                            android:minHeight="24dp"
+                            android:src="li" />
+
+                        <TextView
+                            android:id="@+id/tvLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="12"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnDislike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Dislike"
+                            android:minWidth="24dp"
+                            android:minHeight="24dp"
+                            android:src="dislik" />
+
+                        <TextView
+                            android:id="@+id/tvDislikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="12"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/btnDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Dislike"
+                android:minWidth="24dp"
+                android:minHeight="24dp"
+                android:src="@drawable/ic_dislike" />
+
+            <TextView
+                android:id="@+id/tvDislikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
