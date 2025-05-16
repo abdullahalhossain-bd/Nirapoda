@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -139,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:nestedScrollingEnabled="false" />
+         />
 
         <!-- App Chat Blue Card -->
         <androidx.cardview.widget.CardView
@@ -242,7 +242,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Average response time: < 2 minutes"
+                                android:text="Average response time:  2 minutes"
                                 android:textColor="#B3E3FF"
                                 android:textSize="12sp" />
                         </LinearLayout>
@@ -261,4 +261,4 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

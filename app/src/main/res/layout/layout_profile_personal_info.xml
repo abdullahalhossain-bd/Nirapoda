@@ -34,7 +34,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/edit_name_button"
+                    android:id="@+id/personal_info_full_name_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -49,7 +49,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/name_field"
+                android:id="@+id/personal_info_full_name_input_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_field_gray"
@@ -80,7 +80,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/edit_email_button"
+                    android:id="@+id/personal_info_email_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -95,7 +95,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/email_field"
+                android:id="@+id/personal_info_email_input_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_field_gray"
@@ -126,7 +126,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/edit_phone_button"
+                    android:id="@+id/personal_info_phone_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -141,7 +141,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/phone_field"
+                android:id="@+id/personal_info_phone_input_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_field_gray"
@@ -171,7 +171,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/edit_address_button"
+                    android:id="@+id/personal_info_address_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -186,7 +186,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/address_field"
+                android:id="@+id/personal_info_address_input_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_field_gray"

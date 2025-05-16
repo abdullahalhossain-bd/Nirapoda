@@ -36,16 +36,16 @@
                     android:id="@+id/provider_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/provider_image"
+
                     android:scaleType="centerCrop"
-                    android:visibility="gone" />
+android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/provider_icon"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/provider_icon"
+
                     android:src="@drawable/ic_stethoscope" />
             </FrameLayout>
 
@@ -103,31 +103,30 @@
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:contentDescription="@string/star_rating"
+
                             android:src="@drawable/ic_star_selector" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:contentDescription="@string/star_rating"
+
                             android:src="@drawable/ic_star_selector" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:contentDescription="@string/star_rating"
+
                             android:src="@drawable/ic_star_selector" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:contentDescription="@string/star_rating"
+
                             android:src="@drawable/ic_star_selector" />
 
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:contentDescription="@string/star_rating"
                             android:src="@drawable/ic_star_selector" />
                     </LinearLayout>
                 </LinearLayout>
@@ -162,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableStart="@drawable/ic_calendar"
-                android:text="@string/book_appointment"
+
                 android:textAllCaps="false"
                 android:textColor="@color/primary" />
 

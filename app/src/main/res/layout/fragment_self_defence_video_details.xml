@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Video Player Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/videoPlayerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/black"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/black"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_primary"
+                android:contentDescription="Play video"
+                app:borderWidth="0dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play_arrow"
+                app:tint="@color/white" />
+            <!-- Video View -->
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Progress Bar Overlay -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/controlsOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!-- Progress Bar -->
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:progressTint="@android:color/holo_blue_light"
+                    android:thumbTint="@android:color/holo_blue_light"
+                    app:layout_constraintBottom_toTopOf="@+id/playPauseButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Play/Pause Button -->
+                <ImageButton
+                    android:id="@+id/playPauseButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Play/Pause"
+                    android:src="@drawable/ic_play_arrow"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Rewind Button -->
+                <ImageButton
+                    android:id="@+id/rewindButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Rewind"
+                    android:src="@drawable/ic_skip_previous"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/playPauseButton"
+                    app:layout_constraintStart_toEndOf="@+id/playPauseButton"
+                    app:layout_constraintTop_toTopOf="@+id/playPauseButton" />
+
+                <!-- Forward Button -->
+                <ImageButton
+                    android:id="@+id/forwardButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Forward"
+                    android:src="@drawable/ic_skip_next"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/rewindButton"
+                    app:layout_constraintStart_toEndOf="@+id/rewindButton"
+                    app:layout_constraintTop_toTopOf="@+id/rewindButton" />
+
+                <!-- Time Display -->
+                <TextView
+                    android:id="@+id/timeDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="00:00 / 18:45"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/forwardButton"
+                    app:layout_constraintStart_toEndOf="@+id/forwardButton"
+                    app:layout_constraintTop_toTopOf="@+id/forwardButton" />
+
+                <!-- Volume Button -->
+                <ImageButton
+                    android:id="@+id/volumeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Volume"
+                    android:src="@drawable/ic_volume"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/timeDisplay"
+                    app:layout_constraintEnd_toStartOf="@+id/volumeSlider"
+                    app:layout_constraintTop_toTopOf="@+id/timeDisplay" />
+
+                <!-- Volume Slider -->
+                <SeekBar
+                    android:id="@+id/volumeSlider"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@android:color/white"
+                    android:thumbTint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/volumeButton"
+                    app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+                    app:layout_constraintTop_toTopOf="@+id/volumeButton" />
+
+                <!-- Settings Button -->
+                <ImageButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Settings"
+                    android:src="@drawable/ic_settings"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/volumeSlider"
+                    app:layout_constraintEnd_toStartOf="@+id/fullscreenButton"
+                    app:layout_constraintTop_toTopOf="@+id/volumeSlider" />
+
+                <!-- Fullscreen Button -->
+                <ImageButton
+                    android:id="@+id/fullscreenButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Fullscreen"
+                    android:src="@drawable/ic_fullscreen"
+                    android:tint="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/settingsButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/settingsButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Video Title and Info Section -->
+        <TextView
+            android:id="@+id/txtVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Basic Self-Defense Techniques for Beginners"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/videoPlayerContainer" />
+
+        <!-- Views and Date -->
+        <TextView
+            android:id="@+id/txtViewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="12,432 views"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtVideoTitle" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Apr 02, 2025"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtViewCount"
+            app:layout_constraintStart_toEndOf="@id/txtViewCount"
+            app:layout_constraintTop_toTopOf="@id/txtViewCount" />
+
+        <!-- Beginner Badge -->
+        <TextView
+            android:id="@+id/txtBeginner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/beginner_badge_background"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="Beginner"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/txtDate"
+            app:layout_constraintStart_toEndOf="@id/txtDate"
+            app:layout_constraintTop_toTopOf="@id/txtDate" />
+
+
+
+        <!-- Tags -->
+        <HorizontalScrollView
+            android:id="@+id/tagsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/txtViewCount">
+
+            <com.google.android.material.chip.ChipGroup
+                android:paddingStart="16dp"
+                android:id="@+id/chip_group_tags"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_instructor_label">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="basics"
+                    android:textColor="@color/text_gray"
+                    app:chipBackgroundColor="#EEEEEE" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="beginners"
+                    android:textColor="@color/text_gray"
+                    app:chipBackgroundColor="#EEEEEE" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="techniques"
+                    android:textColor="@color/text_gray"
+                    app:chipBackgroundColor="#EEEEEE" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="safety"
+                    android:textColor="@color/text_gray"
+                    app:chipBackgroundColor="#EEEEEE" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <!-- Instructor -->
+        <TextView
+            android:id="@+id/txtInstructor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Instructor: Sarah Martinez"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tagsContainer" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="This comprehensive tutorial covers essential self-defense techniques that everyone should know. Learn proper stance, basic blocks, strikes, and escape maneuvers that can help you protect yourself in threatening situations. Our expert instructor breaks down each technique step by step, with slow-motion demonstrations to help you master the correct form and execution."
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/txtInstructor" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

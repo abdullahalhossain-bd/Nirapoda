@@ -47,6 +47,7 @@
                         android:layout_marginBottom="4dp">
 
                         <TextView
+                            android:text="Guided Meditation"
                             android:id="@+id/tv_category"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -60,6 +61,7 @@
                             android:layout_marginEnd="8dp" />
 
                         <TextView
+                        android:text="10 minute"
                             android:id="@+id/tv_duration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -68,6 +70,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:text="Guided Meditation"
                         android:id="@+id/tv_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

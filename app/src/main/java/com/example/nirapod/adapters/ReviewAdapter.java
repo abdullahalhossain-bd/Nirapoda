@@ -75,6 +75,9 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         notifyDataSetChanged();
     }
 
+    public interface OnReviewInteractionListener {
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView authorName;
         TextView reviewDate;

@@ -74,6 +74,7 @@
                             android:layout_marginBottom="4dp">
 
                             <TextView
+                                android:id="@+id/contacts_name_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="John Smith"
@@ -82,6 +83,7 @@
                                 android:textStyle="bold"/>
 
                             <TextView
+                                android:id="@+id/contacts_relation_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Spouse"
@@ -96,6 +98,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/contacts_number_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="+1 (555) 987-6543"
@@ -110,7 +113,7 @@
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:id="@+id/btn_edit_contact1"
+                            android:id="@+id/contacts_edit_btn"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:src="@drawable/ic_edit"
@@ -118,7 +121,7 @@
                             android:contentDescription="Edit contact"/>
 
                         <ImageButton
-                            android:id="@+id/btn_call_contact1"
+                            android:id="@+id/contacts_call_btn"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:src="@drawable/ic_phone"

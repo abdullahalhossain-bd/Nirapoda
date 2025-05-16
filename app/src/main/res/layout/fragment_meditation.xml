@@ -14,6 +14,7 @@
 
         <!-- Meditation Hero Section -->
         <androidx.cardview.widget.CardView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -50,6 +51,7 @@
                     android:layout_marginBottom="16dp">
 
                     <LinearLayout
+                        android:id="@+id/sessions"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -67,6 +69,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/sessions_amount_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="30+ Sessions"
@@ -75,6 +78,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/sleep_aid"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -100,6 +104,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/stress_relief"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -158,10 +163,12 @@
 
         <!-- Meditation Cards - RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
+
             android:id="@+id/recycler_meditations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false" />
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_meditation"/>
 
         <!-- Meditation Collections Section -->
         <TextView
@@ -212,6 +219,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/sleep_relaxation_amount_count"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -281,6 +289,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/anxiety_relief_amount_count"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -350,6 +359,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/focus_productivity_amount_count"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -419,6 +429,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/stress_management_amount_count"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
